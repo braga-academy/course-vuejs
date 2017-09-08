@@ -50,6 +50,9 @@
         <input type="checkbox" value="green" v-model="color"> Verde
         <input type="checkbox" value="yellow" v-model="color"> Amarelo
 
+        <hr>
+        <input :false-value="'Inativo'" :true-value="'Ativo'" v-model="status" type="checkbox"> Status
+
 
         <pre>
         {{ $data | json }}
