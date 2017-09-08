@@ -9,7 +9,8 @@ new Vue({
     title: 'Curso Vue.js <smal>!!</smal>',
     description: 'Primeiro código Vue',
     active: true,
-    name: 'luciano'
+    name: 'luciano',
+    color: ['blue']
   },
   ready(){
     setTimeout(() => {

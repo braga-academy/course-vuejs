@@ -32,6 +32,18 @@
         <input type="radio" :value="true" v-model="active"> Ativo
         <input type="radio" :value="false" v-model="active"> Inativo
 
+        <hr>
+        <select v-model="active">
+            <option v-bind:value="true">Ativo</option>
+            <option :value="false">Inativo</option>
+        </select>
+
+        <hr>
+        <select v-model="color" multiple>
+            <option value="blue">Azul</option>
+            <option value="green">Verde</option>
+            <option value="yellow">Amarelo</option>
+        </select>
         <pre>
         {{ $data | json }}
         </pre>
