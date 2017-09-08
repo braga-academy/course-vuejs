@@ -19,6 +19,12 @@
         
         <p :id="'name-' + name">{{ name }}</p>
 
+        <input type="text" v-model="title">
+        <hr>
+        <input type="text" v-model="description">
+        <hr>
+        <input type="checkbox" v-model="active"> Status
+
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script>
         <script src="app.js"></script>
