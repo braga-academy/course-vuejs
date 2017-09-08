@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <h1>{{{ title | upper }}}</h1>
+        <h1>{{ title }}</h1>
+        <h1>{{* title }}</h1>
+        <p>{{ description | upper | limit 12 '[leia mais]'}}</p>
+        
+        <p>{{ active ? description : 'Inativo' }}</p>
+        
+        <p id="name-{{ name }}">{{ name }}</p>
+        
+        <p :id="'name-' + name">{{ name }}</p>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
