@@ -21,6 +21,10 @@
 
         <input type="text" v-model="title">
         <hr>
+        <input type="text" v-model="title" lazy>
+        <hr>
+        <input type="text" v-model="title" debounce="1000">
+        <hr>
         <input type="text" v-model="description">
         <hr>
         <input type="checkbox" v-model="active"> Status
