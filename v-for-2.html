@@ -11,15 +11,23 @@
 
         <h1>Listando Estados</h1>
 
-        <ul class="list-group">
+        <!-- <ul class="list-group">
             <li v-for="(i, state) in states" class="list-group-item">
                 {{ i }} - {{ state.name }}
                 <span class="badge">{{ state.uf}}</span>
             </li>
-        </ul>
+        </ul> -->
+
+        <select v-model="selected">
+            <option v-for="color in colors" :value="$index+1">{{ color }}</option>
+        </select>
+
+        <select v-model="selected">
+            <option v-for="state in states" :value="state.uf.toLowerCase()">{{ state.name }}</option>
+        </select>
 
         <pre>
-        {{ $data | json }}
+        {{ selected | json }}
         </pre>
 
 

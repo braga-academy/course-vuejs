@@ -22,6 +22,13 @@ new Vue({
                 name: 'Rio de Janeiro'
 
             }
-        ]
+        ],
+        colors: [
+            'Azul',
+            'Verde',
+            'Amarelo'
+        ],
+        selected: null
+
     }
 })
