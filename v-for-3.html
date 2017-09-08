@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="container-fluid">
+
+        <h1>Estados</h1>
+
+        <table class="table">
+            <thead>
+                <tr>Estado</tr>
+            </thead>
+            <tbody>
+                <tr v-for="state in states">
+                    <td>{{ state.name }}</td>
+                    <td>
+                        <input type="checkbox" :value="state" v-model="selected">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <pre>
+        {{ selected | json }}
+        </pre>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script>
+        <script src="js/v-for-3.js"></script>
+    </body>
+</html>
