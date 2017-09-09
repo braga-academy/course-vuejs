@@ -25,8 +25,13 @@ new Vue({
                 const task = clone(this.newTask);
                 this.tasks.push(task);
                 this.newTask = {}
+            }            
+        },
+        removeTask(task){
+            const index = this.tasks.indexOf(task);
+            if(index > -1){
+                this.tasks.splice(index, 1);
             }
-            
         }
     }
 })
