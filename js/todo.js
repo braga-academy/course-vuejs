@@ -14,10 +14,19 @@ new Vue({
         }],
         newTask: {}
     },
+    computed: {
+        canAddNewTask(){
+            return this.newTask.value.length > 0
+        }
+    },
     methods: {
         addTask(){
-            const task = clone(this.newTask);
-            this.tasks.push(task);
+            if(this.canAddNewTask){
+                const task = clone(this.newTask);
+                this.tasks.push(task);
+                this.newTask = {}
+            }
+            
         }
     }
 })

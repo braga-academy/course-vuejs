@@ -11,7 +11,7 @@
         <br>
         
         <div class="panel panel-default">
-            <div class="panel-body">
+            <form class="panel-body" @submit.prevent="addTask()">
                 <div class="input-group">
                     <input  type="text"
                             class="form-control"
@@ -19,12 +19,13 @@
                             v-model="newTask.value">
                     <span class="input-group-btn">
                         <button class="btn btn-default"
-                                v-on:click="addTask()"
+                                @click="addTask()"
+                                :disabled="!canAddNewTask"
                                 type="button">Add
                         </button>
                     </span>
                 </div>
-            </div>
+            </form>
         </div>
 
         <!-- <table class="table">
